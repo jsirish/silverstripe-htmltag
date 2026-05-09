@@ -2,7 +2,7 @@
 
 namespace gorriecoe\HTMLTag\View;
 
-use SilverStripe\View\ViewableData;
+use SilverStripe\Model\ModelData;
 use SilverStripe\Core\Convert;
 use InvalidArgumentException;
 
@@ -11,7 +11,7 @@ use InvalidArgumentException;
  *
  * @package silverstripe-htmltag
  */
-class HTMLTag extends ViewableData
+class HTMLTag extends ModelData
 {
     /**
      * List of HTML5 void elements
