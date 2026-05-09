@@ -260,7 +260,7 @@ class HTMLTag extends ViewableData
      * Returns the rendered html markup
      * @return string
      */
-    public function forTemplate()
+    public function forTemplate(): string
     {
         return $this->Render();
     }
