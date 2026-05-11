@@ -2,7 +2,7 @@
 
 namespace gorriecoe\HTMLTag\View;
 
-use SilverStripe\View\ViewableData;
+use SilverStripe\Model\ModelData;
 use SilverStripe\Core\Convert;
 use InvalidArgumentException;
 
@@ -11,7 +11,7 @@ use InvalidArgumentException;
  *
  * @package silverstripe-htmltag
  */
-class HTMLTag extends ViewableData
+class HTMLTag extends ModelData
 {
     /**
      * List of HTML5 void elements
@@ -133,7 +133,7 @@ class HTMLTag extends ViewableData
     public function setClass($value)
     {
         $classes = [];
-        foreach (explode(' ', $value) as $class) {
+        foreach (explode(' ', $value ?? '') as $class) {
             $classes[$class] = $class;
         }
         $this->classes = $classes;
@@ -260,7 +260,7 @@ class HTMLTag extends ViewableData
      * Returns the rendered html markup
      * @return string
      */
-    public function forTemplate()
+    public function forTemplate(): string
     {
         return $this->Render();
     }
